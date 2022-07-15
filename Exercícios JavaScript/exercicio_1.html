@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+</head>
+
+<style>
+
+</style>
+
+<body>
+    <h5>1 – Insira uma caixa de texto na tela que permita somente números. Baseado no valor digitado, calcule a média
+        das notas digitadas pelo usuário.
+    </h5>
+    <hr>
+
+    <h1>Média de notas</h1>
+    <h4>Insira suas notas nos espaços abaixo e saiba a sua média</h4>
+
+    <form>
+        <label>Nota 1</label>
+        <input type="number" id="nota1" value="" max="10">
+        <br>
+        <br>
+        <label>Nota 2</label>
+        <input type="number" id="nota2" value="" max="10">
+        <br>
+        <br>
+        <label>Nota 3</label>
+        <input type="number" id="nota3" value="" max="10">
+        <br>
+        <br>
+        
+        <input type="button" onclick="calc();" value="Enviar">
+        <input type="text" id="media" disabled>
+    </form>
+
+</body>
+
+<script>
+
+    function calc() {
+        var $nota1 = parseFloat(document.getElementById('nota1').value);
+        var $nota2 = parseFloat(document.getElementById('nota2').value);
+        var $nota3 = parseFloat(document.getElementById('nota3').value);
+        var $media = parseInt(($nota1 + $nota2 + $nota3) / 3);
+
+        document.getElementById('media').textContent = ('oi');
+    }
+
+</script>
+
+</html>
+
+
+
+</div>
