@@ -96,33 +96,33 @@
             {
                 name: 'Balder',
                 power: 7,
-                image: "assets/deuses/zeus.png"
+                image: "assets/deuses/balder.png"
             },
             {
                 name: 'Bragi',
                 power: 4,
-                image: "assets/deuses/gaia.png"
+                image: "assets/deuses/bragi.png"
             },
             {
                 name: 'Búri',
                 power: 9,
-                image: "assets/deuses/odin.png"
+                image: "assets/deuses/buri.png"
             },
             {
-                name: 'Dag',
+                name: 'Dagr',
                 power: 10,
-                image: "assets/deuses/loki.png"
+                image: "assets/deuses/dagr.png"
             },
             {
                 name: 'Dellingr',
                 power: 3,
-                image: "assets/deuses/loki.png"
+                image: "assets/deuses/dellingr.png"
             }
 
         ]
 
 
-        let deusesDivContainer = document.getElementById("godsContainer");
+        let godsDiv = document.getElementById("godsContainer");
 
         let newDeus = {}
 
@@ -140,7 +140,7 @@
             clear()
 
             deuses.forEach(function (deus, index) {
-                deusesDivContainer.innerHTML += `
+                godsDiv.innerHTML += `
             <div id="godsCards" class='god' index="${index}" onclick="getGod(${index})">
                 <h1>Cartas de Deuses</h1>
                 <image src="${deus.image}"></image>
@@ -157,7 +157,7 @@
 
         function listGods() {
             deuses.forEach(function (deus, index) {
-                deusesDivContainer.innerHTML += `
+                godsDiv.innerHTML += `
             <div id="godsCards" class='god' index="${index}" onclick="getGod(${index})">
                 <h1>Cartas de Deuses</h1>
                 <image src="${deus.image}"></image>
@@ -173,7 +173,7 @@
         listGods()
 
         function clear() {
-            deusesDivContainer.innerHTML = ""
+            godsDiv.innerHTML = ""
         }
 
         let selectedDeus;
