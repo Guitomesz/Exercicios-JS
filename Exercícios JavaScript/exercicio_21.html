@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" placeholder="Digite o seu nome" id="firstName" value="">
+    <input type="text" placeholder="Digite o seu sobrenome" id="lastName" value="">
+    <button type="button" id="send" onclick="hello();">Enviar</button>
+    <div id="hi"></div>
+
+</body>
+<script>
+
+
+
+    function hello() {
+        let firstName = document.getElementById("firstName").value;
+        let lastName = document.getElementById("lastName").value;
+        alert("Hello, " + firstName + " " +lastName);
+    }
+
+</script>
+
+</html>

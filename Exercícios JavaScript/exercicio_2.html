@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+
+<style>
+
+</style>
+
+<body>
+    <h5>2 – Insira uma caixa de texto na tela e solicite que o usuário digite 5 números, após isso mostre o quadrado de
+        cada número digitado.
+
+    </h5>
+    <hr>
+
+    <h1>Descubra o valor²</h1>
+    <h4>Digite valores no espaço em branco e veja o valor ao quadrado desses valores.</h4>
+
+    <form>
+        <label>Valor: </label>
+        <input type="number" id="valor">
+        <br><br>
+
+        <input type="button" onclick="sendNum();" value="Enviar">
+        <input type="button" onclick="showResult();" value="Mostrar resultado(s)">
+        <br><br>
+        <div id="showSquare">
+    </form>
+
+
+</body>
+
+<script>
+    var $arr = new Array();
+
+    function sendNum() {
+        var $num = document.getElementById('valor').value;
+        $arr[$arr.length] = $num;
+    }
+
+    function showResult() {
+        var $result = "";
+        $result += [$arr];
+        document.getElementById('showSquare').innerHTML = $result ** 2;
+    }
+
+</script>
+
+</html>

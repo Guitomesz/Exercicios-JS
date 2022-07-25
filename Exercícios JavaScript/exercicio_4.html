@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+</head>
+
+<body>
+
+    <h5>4 – Peça ao usuário para digitar um array de Pessoas. Após isso, exiba quantas pessoas são maiores de idade e
+        quantas são menores.
+
+    </h5>
+    <hr>
+
+    <h1>Divisão etária (+18 ou -18)</h1>
+    <h4>Digite idades nos campos em branco e veja a divisão etária.</h4>
+
+    <body>
+
+        Nome: <input id="name" type="name">
+        <br>
+        Idade: <input id="age" type="number">
+        <br>
+
+        <button id="btnAddNew">Enviar dados</button>
+        <div id="menores" value=""></div>
+        <div id="maiores" value=""></div>
+        <br>
+
+        <div id="people" value=""></div>
+
+
+
+    </body>
+
+    <script>
+
+        let addPerson = document.getElementById("btnAddNew");
+        let persons = new Array();
+        persons.name = document.getElementById("name");
+        persons.age = document.getElementById("age");
+
+        let maior = 0;
+        let menor = 0;
+
+
+        addPerson.addEventListener("click", function () {
+            name = document.getElementById("name").value;
+            persons.push(name);
+            age = document.getElementById("age").value;
+            persons.push(age);
+
+            if (age >= 18) {
+                maior++;
+            } else if (age <= 17) {
+                menor++;
+            }
+
+            document.getElementById("people").innerHTML = persons.slice(0, 10).join("<br>");
+
+            document.getElementById("maiores").innerHTML = maior + "participantes são maiores de idade.";
+
+            document.getElementById("menores").innerHTML = menor + "participantes são menores de idade.";
+
+
+
+
+        });
+
+    </script>
+
+</body>
+
+</html>

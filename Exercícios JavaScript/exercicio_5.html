@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta gender="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5</title>
+</head>
+
+<body>
+
+    <h5>5 – Crie um programa que entre com os dados de altura e sexo(Utilizar letras como M, F para facilitar) de 5
+        pessoas. Imprima na tela quantas pessoas são do sexo masculino e quantas pessoas são do sexo feminino. Mostre
+        também qual é a maior altura e se essa altura é de um homem ou uma mulher.
+
+    </h5>
+    <hr>
+
+
+    <body>
+        <input type="radio" id="genderF" name="gender" onclick="genderFSum();">Feminino</input>
+        <br>
+        <input type="radio" id="genderM" name="gender" onclick="genderMSum();">Masculino</input>
+        <br>
+        Altura: <input type="number" id="height">
+
+        <br>
+        <br>
+
+        <button id="send">Envie os dados inseridos</button>
+        <button id="send">Mostre o maior</button>
+
+        <div id="femCounter" value=""></div>
+        <div id="mascCounter" value=""></div>
+        <div id="higher" value=""></div>
+
+        <br>
+
+        <div id="people" value="">
+
+        </div>
+
+
+    </body>
+
+    <script>
+
+        let addPerson = document.getElementById("send");
+        let persons = new Array();
+
+        persons.genderF = document.getElementById("genderF");
+        persons.genderM = document.getElementById("genderM");
+        persons.height = document.getElementById("height");
+
+        femCounter = 0;
+        mascCounter = 0;
+
+
+
+
+        function genderFSum() {
+            femCounter++;
+        }
+
+        function genderMSum() {
+
+            mascCounter++;
+        }
+
+        addPerson.addEventListener("click", function () {
+
+            height = document.getElementById("height").value;
+            persons.push(height);
+
+            document.getElementById("people").innerHTML = persons.slice(0, 5).join("<br>");
+
+            document.getElementById("femCounter").innerHTML = femCounter + "participantes são mulheres.";
+
+            document.getElementById("mascCounter").innerHTML = mascCounter + "participantes são homens.";
+            let max = persons.reduce((a, b) => { return Math.max(a, b) });
+            console.log(max);
+            document.getElementById("higher").innerHTML = "A maior altura registrada foi a de: " + max + "cm.";
+
+
+        });
+
+
+
+
+    </script>
+
+</body>
+
+</html>

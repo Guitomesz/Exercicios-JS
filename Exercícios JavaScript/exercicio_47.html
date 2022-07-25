@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="rel">
+
+    <script>
+        function clock() {
+            var watch = new Date();
+            var hour = watch.getHours();
+            var min = watch.getMinutes();
+            var seg = watch.getSeconds();
+
+            if (hour < 10) {
+                hour = "0" + hour;
+            }
+            if (min < 10) {
+                min = "0" + min;
+            }
+            if (seg < 10) {
+                seg = "0" + seg;
+            }
+
+            var hours = hour + ":" + min + ":" + seg;
+
+            document.getElementById("rel").value = hours;
+        }
+
+        var timer = setInterval(clock, 1000);
+
+    </script>
+
+</body>
+
+</html>

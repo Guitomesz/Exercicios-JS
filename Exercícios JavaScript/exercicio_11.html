@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>caixas</title>
+    <link rel="stylesheet" href="css/boxes.css">
+</head>
+
+<body>
+    <div id="outside" onclick="outside();">
+
+        <div id="boxesContainer" class="container-boxes">
+
+        </div>
+
+    <script>
+
+        let caixas = [
+            {
+            },
+
+            {
+            },
+
+            {
+            },
+
+            {
+            },
+
+            {
+            },
+
+            {
+            }
+
+        ]
+
+        let caixasDivContainer = document.getElementById("boxesContainer");
+
+        function listCaixas() {
+            caixas.forEach(function (caixa, index) {
+                caixasDivContainer.innerHTML += `
+            <div id="boxesCards" class='box' index="${index}" onclick="getCaixa(${index})">
+            </div>`
+            })
+        }
+
+
+
+        listCaixas()
+
+        function outside() {
+            document.getElementById('outside').alert;
+            alert("Perdeu o foco.")
+        }
+
+        function getCaixa(index) {
+            indexBox = index
+            alert("Caixa " + indexBox + " sendo ativada.");
+
+        }
+
+    </script>
+
+</body>
+
+</html>

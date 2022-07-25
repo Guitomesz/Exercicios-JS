@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="cpf" type="text" oninput="mask(event)" maxlength="14">
+</body>
+
+<script>
+
+    let cpf = document.getElementById('cpf');
+    let cpfMask = document.getElementById('cpf');
+    function mask(event) {
+        let result = event.target.value;
+
+        cpfMask.value = result
+            .replace(/\D/g, '')
+            .replace(/(\d{3})(\d)/, '$1.$2')
+            .replace(/(\d{3})(\d)/, '$1.$2')
+            .replace(/(\d{3})(\d{1,2})/, '$1-$2')
+            .replace(/(\-d{2})\d+?$/, '$1')
+    }
+
+</script>
+
+</html>

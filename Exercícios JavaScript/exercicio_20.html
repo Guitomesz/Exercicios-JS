@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img width="200" id="lamp" onmouseover="change()"src="/desligada.png">
+</body>
+<script>
+    var images = [
+        "/ligada.png",
+        "/desligada.png"
+    ];
+
+    function change() {
+        var img = document.getElementById("lamp");
+        var source = img.src;
+        var index = images.indexOf(source);
+        img.src = images[index == images.length - 1 ? 0 : index + 1];
+    }
+</script>
+
+</html>
